@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <img src="assets/world.png" alt="World map">
+        <h1>Country Explorer</h1>
+    </header>
+
+    <section class="filters">
+
+        <div class="filter-group">
+            <label for="country-name">Search by Country Name:</label>
+            <input 
+                type="text" 
+                id="country-name" 
+                placeholder="Enter Country Name"  
+            >
+             <small id="country-name-error" class="input-error"></small>
+        </div>
+
+        <div class="filter-group">
+            <label for="region">Select a Region:</label>
+            <select id="region">
+                <option value="All Regions">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="population">Search by Population:</label>
+            <input 
+                type="number" 
+                id="population"
+                min="0"
+                max="1500000000"
+                step="10000"
+                placeholder="0"
+            >
+             <small>Max - 1.5 billion (1500000000)</small>
+             <small id="population-error" class="input-error"></small>
+        </div>
+
+    </section>
+
+    <main>
+        <div id="country-cards-container" class="country-cards-container">
+            
+        </div>
+
+        <button id="show-more" class="show-more">
+            Show More
+        </button>
+    </main>
+</body>
+
+<script 
+src="script.js">
+</script> 
+
+</html>
